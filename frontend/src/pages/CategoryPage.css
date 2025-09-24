@@ -1,0 +1,89 @@
+.category-page-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: var(--dark-bg-secondary); /* Adjust to fit your theme */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    color: var(--primary-text);
+}
+
+.category-page-title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #a020f0; /* Purple accent */
+    font-size: 2.5em;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+.product-card-link {
+    text-decoration: none;
+    color: inherit; /* Inherit text color from parent */
+}
+
+.product-card {
+    background-color: var(--dark-bg-tertiary); /* Lighter dark for cards */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.product-card-image {
+    width: 100%;
+    height: 200px; /* Fixed height for consistent cards */
+    object-fit: contain; /* Ensures entire image is visible, no cropping */
+    padding: 15px; /* Padding inside the card for the image */
+    background-color: #2a2a2a; /* Slightly lighter background for the image itself */
+    border-bottom: 1px solid #333;
+}
+
+.product-card-info {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Allows info section to expand */
+}
+
+.product-card-name {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: var(--primary-text);
+    height: 3em; /* Give it a fixed height for consistency */
+    overflow: hidden; /* Hide overflow if name is too long */
+    text-overflow: ellipsis; /* Add ellipsis for long names */
+}
+
+.product-card-price {
+    font-size: 1.1em;
+    color: #a020f0; /* Purple for price */
+    font-weight: bold;
+    margin-top: auto; /* Push price to the bottom if needed */
+}
+
+.loading-message, .error-message, .no-products-message {
+    text-align: center;
+    font-size: 1.5em;
+    padding: 50px 20px;
+    color: var(--primary-text);
+}
+
+.error-message {
+    color: #ff6b6b; /* Red for errors */
+}
