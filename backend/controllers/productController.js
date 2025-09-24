@@ -1,4 +1,4 @@
-const Product = require('../models/product'); // Make sure the model path is correct
+const Product = require('../models/Product'); // Make sure the model path is correct
 
 // This function handles fetching all products and filtering by category or search
 exports.getProducts = async (req, res, next) => {
