@@ -6,7 +6,7 @@ const {
   getProductBySlug,
   createProduct,
   addReview,
-} = require('../controllers/ProductController');
+} = require('../controllers/productController');
 const { protect, admin } = require('../middleware/authMiddleware');
 
 router.route('/').get(getProducts).post(protect, admin, createProduct);
